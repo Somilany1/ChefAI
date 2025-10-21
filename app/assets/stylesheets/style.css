@@ -1,0 +1,46 @@
+/* body {
+    display: grid;
+    grid-template-columns: repeat(700px, 1fr);
+} */
+
+header {
+    padding: 1.2rem 3vw;
+}
+
+.nav {
+    display: flex;
+    margin: 0 auto;
+    /* When I open a mobile version header is overflowing, do i need to make a burger? */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__list {
+    display: flex;
+    flex: none;
+    gap: 2rem;
+    /* Why does code in example on web.dev work without this prop below? */
+    list-style-type: none;
+    justify-content: center;
+}
+
+.nav__list__item::marker {
+    content: "";
+}
+
+/* correct */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav__buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav__buttons__button {
+    font: inherit;
+    cursor: pointer;
+}

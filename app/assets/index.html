@@ -5,22 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChefAI</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/app/assets/stylesheets/style.css">
 
 </head>
 
 <body>
     <header>
-        <nav>
-            <a href="#" class="logo">ChefAI</a>
-            <ul class="nav-links">
-                <li><a href="#product">Product</a></li>
-                <li><a href="#solutions">Solutions</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <nav class="nav">
+            <a href="#" class="nav__logo">ChefAI</a>
+            <ul class="nav__list">
+                <!-- Where should I write the classes: into li or into a? -->
+                <li class="nav__list__item"><a href="#product">Product</a></li>
+                <li class="nav__list__item"><a href="#solutions">Solutions</a></li>
+                <li class="nav__list__item"><a href="#faq">FAQ</a></li>
+                <li class="nav__list__item"><a href="#contact">Contact</a></li>
             </ul>
-            <button class="button logIn">Log In</button>
-            <button class="button useApp">Use App</button>
+            <div class="nav__buttons">
+                <button class="nav__buttons__button">Log In</button>
+                <button class="nav__buttons__button">Use App</button>
+            </div>
         </nav>
     </header>
 
@@ -30,7 +33,7 @@
             <h1>AI Cooking Assistant</h1>
             <p>Find recipes, track nutrition, and cook smarter — all in one app</p>
             <button class="button getStartedFree">Get Started Free</button>
-            <img src="cook.jpg" alt="Hand holding a frying pan with steaming hot food">
+            <img src="/app/assets/images/cook.jpg" alt="Hand holding a frying pan with steaming hot food">
         </section>
 
         <section id="solutions">
