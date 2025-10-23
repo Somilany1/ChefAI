@@ -3,6 +3,12 @@
     grid-template-columns: repeat(700px, 1fr);
 } */
 
+/* HEADER */
+
+html {
+    background-color: var(--color-background);
+}
+
 header {
     padding: 1.2rem 3vw;
 }
@@ -10,18 +16,21 @@ header {
 .nav {
     display: flex;
     margin: 0 auto;
-    /* When I open a mobile version header is overflowing, do i need to make a burger? */
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+
+.nav__logo {
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
 }
 
 .nav__list {
     display: flex;
     flex: none;
     gap: 2rem;
-    /* Why does code in example on web.dev work without this prop below? */
-    list-style-type: none;
     justify-content: center;
 }
 
@@ -29,18 +38,116 @@ header {
     content: "";
 }
 
-/* correct */
-a {
+.nav__list__item__href {
     text-decoration: none;
     color: inherit;
 }
 
 .nav__buttons {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .nav__buttons__button {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
     font: inherit;
+    font-weight: 700;
     cursor: pointer;
 }
+
+.nav__buttons__button__color {
+    color: white;
+    background-color: lch(46% 32 111);
+}
+
+.nav__buttons__button__border {
+    border: solid 1px black;
+}
+
+.burger-menu__button {
+    display: none;
+}
+
+.burger-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .burger-menu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+
+    .burger-menu__header {
+        width: 100%;
+        padding: 1.2rem 3vw;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        background-color: var(--color-background);
+        touch-action: none;
+    }
+
+    .burger-menu__header__logo {
+        display: inline-block;
+        margin-right: auto;
+        font-weight: 700;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .burger-menu__header__button {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        font: inherit;
+        font-size: 1.5rem;
+        font-weight: 700;
+        cursor: pointer;
+        background-color: var(--color-background);
+    }
+
+    .burger-menu__nav {
+        display: none;
+        background-color: var(--color-background);
+        padding: 20px;
+        width: 85%;
+        height: 100dvh;
+        touch-action: none;
+    }
+
+    .burger-menu__nav__list {
+        width: 100%;
+        padding: 0 0 0 5%;
+        display: flex;
+        flex-direction: column;
+        flex: none;
+        gap: 1.5rem;
+        align-content: center;
+    }
+
+    .burger-menu__nav__list__item::marker {
+        content: "";
+    }
+
+    .burger-menu__nav__list__item__href {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+/* HERO SECTION */
+

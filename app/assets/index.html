@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChefAI</title>
-    <link rel="stylesheet" href="/app/assets/stylesheets/style.css">
-
+    <!-- How can I include all css files? -->
+    <link rel="stylesheet" href="stylesheets/_reset.css">
+    <link rel="stylesheet" href="stylesheets/colors.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 
 <body>
@@ -14,17 +16,34 @@
         <nav class="nav">
             <a href="#" class="nav__logo">ChefAI</a>
             <ul class="nav__list">
-                <!-- Where should I write the classes: into li or into a? -->
-                <li class="nav__list__item"><a href="#product">Product</a></li>
-                <li class="nav__list__item"><a href="#solutions">Solutions</a></li>
-                <li class="nav__list__item"><a href="#faq">FAQ</a></li>
-                <li class="nav__list__item"><a href="#contact">Contact</a></li>
+                <li class="nav__list__item"><a href="#product" class="nav__list__item__href">Product</a></li>
+                <li class="nav__list__item"><a href="#solutions" class="nav__list__item__href" href="#solutions">Solutions</a></li>
+                <li class="nav__list__item"><a href="#faq" class="nav__list__item__href">FAQ</a></li>
+                <li class="nav__list__item"><a href="#contact" class="nav__list__item__href">Contact</a></li>
             </ul>
             <div class="nav__buttons">
-                <button class="nav__buttons__button">Log In</button>
-                <button class="nav__buttons__button">Use App</button>
+                <!-- Are classes names correct? -->
+                <button class="nav__buttons__button nav__buttons__button__border">Log In</button>
+                <button class="nav__buttons__button nav__buttons__button__color">Use App</button>
             </div>
         </nav>
+
+        <!-- Burger Menu -->
+        <div class="burger-menu">
+            <div class="burger-menu__header">
+                <a href="#" class="burger-menu__header__logo">ChefAI</a>
+                <button class="burger-menu__header__button">☰</button>
+            </div>
+
+            <aside class="burger-menu__nav">
+                    <ul class="burger-menu__nav__list">
+                        <li class="burger-menu__nav__list__item"><a href="#product" class="burger-menu__nav__list__item__href">Product</a></li>
+                        <li class="burger-menu__nav__list__item"><a href="#solutions" class="burger-menu__nav__list__item__href" href="#solutions">Solutions</a></li>
+                        <li class="burger-menu__nav__list__item"><a href="#faq" class="burger-menu__nav__list__item__href">FAQ</a></li>
+                        <li class="burger-menu__nav__list__item"><a href="#contact" class="burger-menu__nav__list__item__href">Contact</a></li>
+                    </ul>
+            </aside>
+        </div>
     </header>
 
 
@@ -33,7 +52,7 @@
             <h1>AI Cooking Assistant</h1>
             <p>Find recipes, track nutrition, and cook smarter — all in one app</p>
             <button class="button getStartedFree">Get Started Free</button>
-            <img src="/app/assets/images/cook.jpg" alt="Hand holding a frying pan with steaming hot food">
+            <img src="images/cook.jpg" alt="Hand holding a frying pan with steaming hot food">
         </section>
 
         <section id="solutions">
@@ -115,7 +134,7 @@
     </main>
 
 
-    <footer>
+    <footer id="contact">
         <div class="company">
             <p>AIChef</p>
             <p>We create smart culinary solutions powered by AI to make cooking easier, faster, and more personal.
@@ -135,6 +154,8 @@
             <p>Email: example@gamil.com</p>
         </div>
     </footer>
+
+    <script src="/ChefAI/app/assets/javascript/script.js"></script>
 </body>
 
 </html>
