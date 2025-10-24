@@ -11,6 +11,11 @@ html {
 
 header {
     padding: 1.2rem 3vw;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--color-background);
+    z-index: 999;
 }
 
 .nav {
@@ -22,6 +27,7 @@ header {
 }
 
 .nav__logo {
+    font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
     color: inherit;
@@ -146,6 +152,10 @@ header {
     .burger-menu__nav__list__item__href {
         text-decoration: none;
         color: inherit;
+    }
+
+    main {
+        margin-top: var(--burger-menu__header__height);
     }
 }
 

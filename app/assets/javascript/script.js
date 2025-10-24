@@ -10,3 +10,9 @@ document.addEventListener('click', (e) => {
     sidebar.style.display = 'none';
   }
 });
+
+const burgerMenuHeader = document.querySelector('.burger-menu__header');
+if (burgerMenuHeader) {
+  const height = burgerMenuHeader.offsetHeight;
+  document.documentElement.style.setProperty('--burger-menu__header__height', `${height - 40}px`);
+}
