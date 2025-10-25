@@ -8,8 +8,8 @@
   --lch-bg: 98.7% 0.007 95.3;            /* FFFDF5 */
   --lch-dark-green: 46.5% 0.084 101.1;   /* 657138 */ 
 
-  --color-accent: oklch(var(--lch-dark-red));
   --color-accent: oklch(var(--lch-orange));
+  --color-accent-dark: oklch(var(--lch-dark-red));
   --color-background: oklch(var(--lch-bg));
   --color-yellow: oklch(var(--lch-yellow));
   --color-positive: oklch(var(--lch-light-green));
