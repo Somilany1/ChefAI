@@ -108,21 +108,22 @@ header {
 
 .nav__buttons__useApp {
     color: white;
-    background-color: var(--color-dark-green);
+    background-color: rgba(101, 113, 56, 1);
 }
 
 .nav__buttons__useApp:hover {
-    background-color: var(--color-accent);
+    background-color: #86964A;
 }
 
 .nav__buttons__logIn {
-    border: 2px solid var(--color-dark-green);
+    border: 2px solid rgba(101, 113, 56, 1);
     background-color: transparent;
     color: var(--color-dark-green);
 }
 
 .nav__buttons__logIn:hover {
-    background-color: var(--color-dark-green);
+    border: solid 2px #86964A;
+    background-color: #86964A;
     color: white;
 }
 
@@ -260,7 +261,11 @@ main {
     text-decoration: none;
     display: inline-block;
     color: white;
-    background-color: var(--color-dark-green);
+    background-color: rgba(101, 113, 56, 1);
+}
+
+.product-section__wrapper__button:hover {
+    background-color: #86964A;
 }
 
 .product-section__image {
@@ -346,9 +351,13 @@ main {
     text-decoration: none;
     display: inline-block;
     text-align: center;
-    background-color: var(--color-accent-dark);
+    background-color: rgba(86, 29, 37, 1);
     color: white;
     margin-top: 2rem;
+}
+
+.solutions-section__article__content__button:hover, .solutions-section__article-reversed__content__button:hover {
+    background-color: #7A2934;
 }
 
 .solutions-section__article__image {
@@ -455,13 +464,9 @@ main {
 }
 
 .faq-section__question {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
     width: 100%;
-    background-color: var(--color-positive-light);
+    background-color: rgba(205, 231, 190, 0.3);
     border-radius: 20px;
-    align-items: center;
     padding: 2rem;
     font-size: 1.5rem;
 }
@@ -470,16 +475,40 @@ main {
     justify-self: start;
 }
 
-.faq-section__question__button__toggle {
-    justify-self: end;
+.faq-section__question__button {
+    cursor: pointer;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: 0;
+    align-self: center;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
 }
 
-.faq-section__question__button {
-    background-color: var(--color-positive-light);
+.faq-section__question__button__toggle {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .faq-section__questions__answer {
     display: none;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    border-top: solid 1px rgb(80, 80, 80);
+    line-height: 1.6;
+    color: rgb(80, 80, 80);
 }
 
 .footer {
