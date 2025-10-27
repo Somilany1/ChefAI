@@ -3,10 +3,10 @@
   --lch-dark-red: 25.4% 0.144 26.3;      /* 561D25 */
   --lch-orange: 66.9% 0.164 76.1;        /* CE8147 */
   --lch-yellow: 91.3% 0.092 101.3;       /* ECDD7B */
-  --lch-light-green: 85.5% 0.066 109.2;  /* D3E298 */
+  --lch-light-green: rgba(205, 231, 190, 0.3);  /* D3E298 */
   --lch-pale-green: 90.7% 0.071 111.8;   /* CDE7BE */
   --lch-bg: 98.7% 0.007 95.3;            /* FFFDF5 */
-  --lch-dark-green: 46.5% 0.084 101.1;   /* 657138 */ 
+  --lch-dark-green: rgba(101, 113, 56, 1);   /* 657138 */ 
 
   --color-accent: oklch(var(--lch-orange));
   --color-accent-dark: oklch(var(--lch-dark-red));

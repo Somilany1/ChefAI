@@ -36,3 +36,16 @@ document.addEventListener('click', (e) => {
 window.addEventListener('scroll', () => {
   updateUnderline(); // Update underline when scrolling
 });
+
+const buttonsAnswer = document.querySelectorAll('.faq-section__question__button');
+const answers = document.querySelectorAll('.faq-section__questions__answer');
+
+buttonsAnswer.forEach((button, i) => {
+  button.addEventListener('click', () => {
+    if (answers[i].style.display === 'block') {
+      answers[i].style.display = 'none';
+    } else {
+      answers[i].style.display = 'block';
+    }
+  });
+});
