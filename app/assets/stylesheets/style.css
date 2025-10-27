@@ -489,7 +489,7 @@ main {
     max-width: 1100px;
     align-items: start;        
     justify-items: center;      
-    justify-content: center;    
+    justify-self: center;    
 }
 
 .footer-nav-links__href {
