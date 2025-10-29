@@ -20,6 +20,7 @@ body {
     display: grid;
     grid-template-rows: auto 1fr;
     min-height: 100vh;
+    justify-items: center;
 }
 
 header {
@@ -341,10 +342,10 @@ main {
 }
 
 .solutions-section__article__content__button {
-    padding: 0.5rem 1.5rem;
+    padding: 1rem 2rem;
     border-radius: 50px;
     font: inherit;
-    font-weight: 400;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
     border: none;
@@ -386,6 +387,12 @@ main {
 }
 
 .solutions-section__article-reversed__content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex: 1;
+    overflow: hidden;
+    min-width: 60%;
     justify-self: end;
 }
 
@@ -396,10 +403,10 @@ main {
 }
 
 .solutions-section__article-reversed__content__button {
-    padding: 0.5rem 1.5rem;
+    padding: 1rem 2rem;
     border-radius: 50px;
     font: inherit;
-    font-weight: 400;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
     border: none;
@@ -409,7 +416,7 @@ main {
     background-color: var(--color-accent-dark);
     color: white;
     margin-top: 2rem;
-    justify-self: end;
+    align-self: end;
 }
 
 .solutions-section__article-reversed__image {
@@ -425,6 +432,43 @@ main {
     margin: 0 auto;
 }
 
+@media (max-width: 1000px) {
+    .solutions-section {
+        display: grid;
+        gap: 8rem;
+        margin-top: 5rem;
+    }
+
+    .solutions-section__article-reversed {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin: 0 4rem;
+        padding: 0 0.5rem;  
+    }
+
+    .solutions-section__article {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 3rem;
+        margin: 0 4rem;
+        padding: 0 0.5rem;
+    }
+
+    .solutions-section__article__image,
+    .solutions-section__article-reversed__image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        align-self: stretch;
+    }
+
+    .solutions-section__article-reversed__content__button, .solutions-section__article__content__button {
+        align-self: end;
+    }
+}
+
 @media (max-width: 768px) {
     .solutions-section {
         display: grid;
@@ -432,25 +476,35 @@ main {
         margin-top: 5rem;
     }
 
-    .solutions-section__article {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .solutions-section__article-reversed {
+        display: flex;
+        flex-direction: column;
         gap: 3rem;
-        margin: 0 6rem;
+        margin: 0 3rem;
+        padding: 0 0.5rem;        
+    }
+
+    .solutions-section__article {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 3rem;
+        margin: 0 3rem;
         padding: 0 0.5rem;
     }
 
-    .solutions-section__article-reversed {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-        margin: 0 6rem;
-        padding: 0 0.5rem;
+    .solutions-section__article__image,
+    .solutions-section__article-reversed__image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        align-self: stretch;
     }
 }
 
 .faq-section {
-    margin-top: 10rem;
+    max-width: 1400px;
+    margin: 10rem 12.5rem 0;
 }
 
 .faq-section__questions {
@@ -458,7 +512,7 @@ main {
     grid-template-rows: auto;
     gap: 1rem;
     justify-items: center;
-    margin: 4rem 12.5rem 0 12.5rem;
+    margin-top: 4rem;
 }
 
 .faq-section__header {
@@ -472,10 +526,6 @@ main {
     border-radius: 20px;
     padding: 2rem;
     font-size: 1.5rem;
-}
-
-.faq-section__question__text {
-    justify-self: start;
 }
 
 .faq-section__question__button {
@@ -514,11 +564,21 @@ main {
     color: rgb(80, 80, 80);
 }
 
+@media (max-width: 1000px) {
+    .faq-section {
+        margin: 10rem 4rem 0;
+    }
+
+    .faq-section__question {
+        padding: 1.5rem;
+    }
+}
+
 .footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 12rem 12.5rem 2rem 12.5rem;
-    max-width: 1100px;
+    max-width: 1400px;
     align-items: start;        
     justify-items: center;      
     justify-self: center;    
@@ -532,3 +592,9 @@ main {
 .footer__company__header, .footer__nav__header, .footer__contact__header {
     font-weight: 700;
 }
+
+@media (max-width: 1000px) {
+    .footer {
+        margin: 12rem 4rem 2rem 4rem;  
+    }   
+} 
